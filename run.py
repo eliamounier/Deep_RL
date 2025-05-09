@@ -12,6 +12,10 @@ import matplotlib
 import matplotlib.pyplot
 
 # ENVS = ["LunarLander-v3", "CartPole", "MountainCar-v0", "MountainCarContinuous-v0", "Acrobot-v1", "Pendulum" ]
+
+## EASIEST AND QUICKEST: Lunar Lander, CartPole, Acrobot, and maybe pendulum -- I think mountaincar needs A LOT of steps
+
+
 def parse_args():
     parser = argparse.ArgumentParser(description="Train a reinforcement learning agent.")
     parser.add_argument("--env", type=str, default="CartPole-v0", help="Environment name")
