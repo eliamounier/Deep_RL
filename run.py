@@ -86,7 +86,6 @@ matplotlib.pyplot.fill_between(timesteps,
 matplotlib.pyplot.xlabel('Timesteps')
 matplotlib.pyplot.ylabel('Mean Reward')
 matplotlib.pyplot.title(f"{ALGO_NAME} Performance on {ENV}")
-matplotlib.pyplot.show()
 matplotlib.pyplot.savefig(os.path.join(log_dir, "performance.png"))
 
 # Create Elevation environment
