@@ -43,6 +43,7 @@ EVAL_FREQUENCY = TOTAL_TIMESTEPS//50 #50 is the number of times we'll eval
 
 
 log_dir = f"./logs/{ALGO_NAME}/{ENV}/"    
+
 env = gymnasium.make(ENV)
 
 env_val = make_vec_env(ENV, n_envs=1)
@@ -54,7 +55,8 @@ eval_callback = EvalCallback(env_val,
                             deterministic=True,
                             n_eval_episodes=20,)
 
-model = ALGORITHM('MlpPolicy', env, verbose=0)
+model = ALGORITHM('MlpPolicy', env, verbose=1, tensorboard_log=log_dir)
+
 
 model.learn(total_timesteps=TOTAL_TIMESTEPS,
             progress_bar=True,
