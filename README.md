@@ -1,4 +1,5 @@
-# Deep Reinforcement Learning Project 
+# A Comparative Study of Deep Reinforcement Learning Algorithms: DQN, PPO, SAC and TD3
+
 
 The current repository was created within the scope of a project during the course [EE-568 Reinforcement Learning](https://edu.epfl.ch/coursebook/en/reinforcement-learning-EE-568) at [EPFL](https://www.epfl.ch/en/).
 
@@ -68,7 +69,7 @@ In the CartPole environment, the goal is to balance a pole upright on a moving c
 The Acrobot environment consists of two links connected linearly to form a chain, with one end of the chain fixed. The joint between the two links is actuated. The goal is to swing the end of the lower link up to a target height. The environment has a continuous state space and a discrete action space, making it a challenging control task. 
 
 **Pendulum** 🕰️🔁 <br> 
-The Pendulum environment consists of a pendulum attached at one end to a fixed point, and the other end being free. The pendulum starts in a random position and the goal is to apply torque on the free end to swing it into an upright position, with its center of gravity right above the fixed point. 
+The Pendulum environment consists of a pendulum attached at one end to a fixed point, and the other end being free. The pendulum starts in a random position and the goal is to apply torque on the free end to swing it into an upright position, with its center of gravity right above the fixed point. The action space is continuous.
 
 **Lunar Lander** 🚀🌕 <br> 
 The Lunar Lander environment is a classic rocket trajectory optimisation problem. It simulates a spacecraft landing between two flags on the moon's surface. The agent controls the lander's main and side thrusters to achieve a soft landing. It includes both discrete and continuous versions and provides a good test for both stability and precision in control. 
