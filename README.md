@@ -118,10 +118,10 @@ The training lengths varied per environment (for example 20,000–200,000 timest
 ## Results
 The following plots visualise the training performance of the evaluated algorithms on the environments.
 
-<div align="center"> <img src="results/performance_cartpole.png" width="30%" alt="(a) CartPole"/> <img src="results/performance_acrobot.png" width="30%" alt="(b) Acrobot"/> <img src="results/performance_lunar-discrete.png" width="30%" alt="(c) Lunar Lander (Discrete)"/> </div>
+<div align="center"> <img src="results/performance_cartpole.png" width="33%" alt="(a) CartPole"/> <img src="results/performance_acrobot.png" width="33%" alt="(b) Acrobot"/> <img src="results/performance_lunar-discrete.png" width="33%" alt="(c) Lunar Lander (Discrete)"/> </div>
 Figure 1: Comparison of PPO and DQN on discrete environments: (a) CartPole, (b) Acrobot and (c) Lunar Lander Discrete.
 
-<div align="center"> <img src="results/performance_lunar-continuous.png" width="45%" alt="(a) Lunar Lander (Continuous)"/> <img src="results/performance_pendulum.png" width="45%" alt="(b) Pendulum"/> </div>
+<div align="center"> <img src="results/performance_lunar-continuous.png" width="33%" alt="(a) Lunar Lander (Continuous)"/> <img src="results/performance_pendulum.png" width="33%" alt="(b) Pendulum"/> </div>
 Figure 2: Comparison of PPO, TD3, and SAC on continuous environments: (a) Lunar Lander Continuous and (b) Pendulum.
 
 TODOOOO LITTLE SENTENCE TO EXPLAIN THE PLOTS
@@ -129,7 +129,7 @@ TODOOOO LITTLE SENTENCE TO EXPLAIN THE PLOTS
 The following table summarises the computational aspects such as training speed (measured in frames per second), storage footprint (in kilobytes) and parameter density (parameters per kilobyte) for each algorithm-environment pair.
 
 <p align="center">
-  <img src="results/comparison_table_complete.png" width="60%" alt="RL algorithm efficiency table">
+  <img src="results/comparison_table_complete.png" width="40%" alt="RL algorithm efficiency table">
 </p>
 
 TODOOOO LITTLE SENTENCE TO EXPLAIN THE TABLE
