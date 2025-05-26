@@ -85,7 +85,7 @@ The Lunar Lander environment is a classic rocket trajectory optimisation problem
 - [tqdm](https://pypi.org/project/tqdm/)
 - [PyTorch](https://pypi.org/project/torch/)
 - [Gymnasium](https://pypi.org/project/gymnasium/)
-- [Stable-baselines3](https://pypi.org/project/stable-baselines3/)
+- [Stable-Baselines3](https://pypi.org/project/stable-baselines3/)
 - [Tensorboard](https://pypi.org/project/tensorboard/)
 
 **`requirements.txt`** is provided to install the necessary Python dependencies.
@@ -99,24 +99,37 @@ The repository is structured the following way:
 
 ```
 Deep_RL/
-├── XXX                              # Directory containing XXX
-    ├── XXX                               # Directory containing XXX
-       ├── XXX                                  # File containing XXX
-├── src/                              # Directory containing the main source code 
-    ├── utils/                             # Directory containing some utils scripts
-       ├── XXX.py                               # Script containing XXX
-       ├── XXX.py                               # Script containing XXX
-    ├── notebooks/                          # Directory containing the data pre-processing notebook
-       ├── XXX.ipynb                            # Jupyter notebook XXX
-├── requirements.txt/                 # File containing all requirements to run the current project
+├── results/                         # Directory containing all the obtained plots and tables
+├── results_data/                    # Directory containing all pickle files per environment
+├── analysis.ipynb                   # Jupyter notebook used to analyse the training speed, storage footprint and parameter density per algorithm
+├── plot.py                          # Script to plot performance data from multiple algorithms on a given environment
+├── requirements.txt/                # File containing all requirements to run the current project
+├── run_multiseed.py                 # Script to train and evaluate the algorithms on the environments using several random seeds
 ```
 
 ## Approach
-Approach
+We evaluated and compared the four introduced deep reinforcement learning algorithms - DQN, PPO, SAC and TD3 - on the different environments, covering both discrete and continuous action spaces. Each algorithm was implemented using Stable-Baselines3, with experiments run over three random seeds for reproducibility. We used MlpPolicy networks and evaluated models at regular intervals during training based on average episode rewards.
+
+In total, we ran twelve experiments, selecting algorithm-environment pairs based on action space compatibility. For discrete environments (CartPole, Acrobot, Lunar Lander Discrete), we tested DQN and PPO. For continuous environments (Pendulum, Lunar Lander Continuous), we tested PPO, SAC, and TD3.
+
+The training lengths varied per environment (for example 20,000–200,000 timesteps) and the results were evaluated using metrics such as mean reward, training speed (FPS), storage footprint and parameter density. We visualised the learning progress with mean ± standard deviation reward curves and the key results are discussed in the report and shown in figure/table XXX.
 
 
 ## Results
-Results -> comparison etc.
+The following plots and tables visualise our obtained results.
+
+<div align="center"> <img src="results/performance_cartpole.png" width="30%" alt="(a) CartPole"/> <img src="results/performance_acrobot.png" width="30%" alt="(b) Acrobot"/> <img src="results/performance_lunar-discrete.png" width="30%" alt="(c) Lunar Lander (Discrete)"/> </div>
+Figure 1: Comparison of PPO and DQN on discrete environments: (a) CartPole, (b) Acrobot and (c) Lunar Lander Discrete.
+
+<div align="center"> <img src="results/performance_lunar-continuous.png" width="45%" alt="(a) Lunar Lander (Continuous)"/> <img src="results/performance_pendulum.png" width="45%" alt="(b) Pendulum"/> </div>
+Figure 2: Comparison of PPO, TD3, and SAC on continuous environments: (a) Lunar Lander Continuous and (b) Pendulum.
+
+TODOOOO LITTLE SENTENCE TO EXPLAIN THE PLOTS
+
+Training Speed, Storage Footprint, and Parameter Density
+
+![Table comparing FPS, SF, and PD](results/comparison_table_complete.png)
+
 
 
 ## Conclusion
