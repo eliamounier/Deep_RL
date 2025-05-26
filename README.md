@@ -79,7 +79,14 @@ The Lunar Lander environment is a classic rocket trajectory optimisation problem
 ### Pre-requisites
 
 - [Python](https://www.python.org/downloads/)
-- ...
+- [Numpy](https://numpy.org/)
+- [Pandas]
+- [Matplotlib]
+- [tqdm](https://pypi.org/project/tqdm/)
+- [Torch]
+- [Gymnasium]
+- [Stable-baselines3]
+- [Tensorboard](https://pypi.org/project/tensorboard/)
 
 **`requirements.txt`** is provided to install the necessary Python dependencies.
 
