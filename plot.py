@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def load_data(env, directory="plot_files_plk"):
+def load_data(env, directory="results_data"):
     """
     Load pickle files containing timesteps, means, and standard deviations.
     Args:
