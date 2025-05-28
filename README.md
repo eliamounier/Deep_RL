@@ -79,6 +79,29 @@ The Pendulum environment consists of a pendulum attached at one end to a fixed p
 **Lunar Lander** 🚀🌕 <br> 
 The Lunar Lander environment is a classic rocket trajectory optimisation problem. It simulates a spacecraft landing between two flags on the moon's surface. The agent controls the lander's main and side thrusters to achieve a soft landing. It includes both discrete and continuous versions and provides a good test for both stability and precision in control. 
 
+<p align="center">
+  <table style="font-size: 12px;">
+    <tr>
+      <td align="center">
+        <img src="illustrations/cart_pole.png" width="80px"><br>
+        <sub>CartPole</sub>
+      </td>
+      <td align="center">
+        <img src="illustrations/acrobot.png" width="80px"><br>
+        <sub>Acrobot</sub>
+      </td>
+      <td align="center">
+        <img src="illustrations/pendulum.png" width="80px"><br>
+        <sub>Pendulum</sub>
+      </td>
+      <td align="center">
+        <img src="illustrations/lunar_lander.png" width="80px"><br>
+        <sub>Lunar Lander</sub>
+      </td>
+    </tr>
+  </table>
+</p>
+
 ## Setup
 
 ### Pre-requisites
