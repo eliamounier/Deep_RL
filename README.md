@@ -5,9 +5,9 @@ The current repository was created within the scope of a project during the cour
 
 The authors of the repository are:
  
-- Camille Nicole Gisèle Challier
+- Camille Challier
 - Céline Kalbermatten
-- Wesley Elliott Stephen Monteith-Finas
+- Wesley Monteith-Finas
 - Luca Mouchel
 - Elia Mounier-Poulat
 - Colin Smyth 
@@ -26,14 +26,12 @@ Together they form the group **RLSquad: Gradient Descent into Chaos**. 😊
 
 
 ## Abstract
-TODOOOOOOO
+Over the past decade, deep learning has significantly advanced Reinforcement Learning (RL), enabling solutions to increasingly complex tasks through neural network-based policies. In this project, we systematically evaluated and compared four popular deep RL algorithms: DQN, PPO, TD3 and SAC, across a range of discrete and continuous control environments. Our study focused on their efficiency in terms of convergence speed, training stability and policy storage requirements. We found that PPO offers a strong balance between computational speed and memory efficiency across both action space types, while SAC and TD3 achieved superior performance on continuous control tasks at the expense of higher computational cost. These insights provide practical guidance for selecting RL algorithms based on resource constraints and task complexity.
 
 
 ## Introduction
 ### Algorithms 
-
-
-
+In this project, we focused on four well-known algorithms that are often used in research and applications: DQN, PPO, SAC and TD3. Each of these algorithms follows a different approach and comes with its own strengths and limitations.
 
 **Deep Q-Newwork (DQN)** 🤖🧠 <br> 
 Deep Q-Network (DQN) is a value-based, off-policy algorithm introduced by Mnih et al. (2015). It learns a Q-function $Q(s, a; \theta)$ using a neural network to approximate the expected return of taking action $a$ in state $s$. The Q-network is trained by minimising a sequence of loss functions $L_i(\theta_i)$ that changes at each iteration $i$:
@@ -68,7 +66,7 @@ where $\theta_i'$ are the parameters of the two target Q-networks, and $\pi_{\ph
 We used several different Gymnasium environments to test and compare the performance of the implemented algorithms. These environments vary in terms of dynamics, action space and difficulty.
 
 **Cartpole** 🎡⚖️ <br> 
-In the CartPole environment, the goal is to balance a pole upright on a moving cart by applying forces to the left or right. The agent must prevent the pole from falling over for as long as possible. It is a classic control problem with a discrete action space.
+In the Cartpole environment, the goal is to balance a pole upright on a moving cart by applying forces to the left or right. The agent must prevent the pole from falling over for as long as possible. It is a classic control problem with a discrete action space.
 
 **Acrobot** 🤸‍♂️🔗 <br> 
 The Acrobot environment consists of two links connected linearly to form a chain, with one end of the chain fixed. The joint between the two links is actuated. The goal is to swing the end of the lower link up to a target height. The environment has a continuous state space and a discrete action space, making it a challenging control task. 
@@ -137,32 +135,35 @@ Deep_RL/
 ```
 
 ## Approach
-We evaluated and compared the four introduced deep reinforcement learning algorithms - DQN, PPO, SAC and TD3 - on the different environments, covering both discrete and continuous action spaces. Each algorithm was implemented using Stable-Baselines3, with experiments run over three random seeds for reproducibility. We used MlpPolicy networks and evaluated models at regular intervals during training based on average episode rewards.
+We evaluated and compared the four introduced deep reinforcement learning algorithms - DQN, PPO, SAC and TD3 - on the different environments, covering both discrete and continuous action spaces. Each algorithm was implemented using Stable Baselines3, with experiments run over three random seeds for reproducibility. We used Mlp Policy networks and evaluated models at regular intervals during training based on average episode rewards.
 
-In total, we ran twelve experiments, selecting algorithm-environment pairs based on action space compatibility. For discrete environments (CartPole, Acrobot, Lunar Lander Discrete), we tested DQN and PPO. For continuous environments (Pendulum, Lunar Lander Continuous), we tested PPO, SAC, and TD3.
+In total, we ran twelve experiments, selecting algorithm-environment pairs based on action space compatibility. For discrete environments (Cartpole, Acrobot and Discrete Lunar Lander), we tested DQN and PPO. For continuous environments (Pendulum and Continuous Lunar Lander), we tested PPO, SAC and TD3.
 
-The training lengths varied per environment (for example 20,000–200,000 timesteps) and the results were evaluated using metrics such as mean reward, training speed (FPS), storage footprint and parameter density. We visualised the learning progress with mean ± standard deviation reward curves and the key results are discussed in the report and shown in figure/table XXX.
+The training lengths varied per environment (for example 20,000–200,000 timesteps) and the results were evaluated using metrics such as mean reward, training speed (FPS), storage footprint and parameter density. We visualised the learning progress with mean ± standard deviation reward curves and the key results are discussed in the report and shown in the figures and table of [Results](#results).
 
 
 ## Results
 The following plots visualise the training performance of the evaluated algorithms on the environments.
 
-<div align="center"> <img src="results/performance_cartpole.png" width="33%" alt="(a) CartPole"/> <img src="results/performance_acrobot.png" width="33%" alt="(b) Acrobot"/> <img src="results/performance_lunar-discrete.png" width="33%" alt="(c) Lunar Lander (Discrete)"/> </div>
-Figure 1: Comparison of PPO and DQN on discrete environments: (a) CartPole, (b) Acrobot and (c) Lunar Lander Discrete.
+<div align="center"> <img src="results/performance_cartpole.png" width="33%" alt="(a) Cartpole"/> <img src="results/performance_acrobot.png" width="33%" alt="(b) Acrobot"/> <img src="results/performance_lunar-discrete.png" width="33%" alt="(c) Lunar Lander (Discrete)"/> </div>
+<p align="center">
+  <strong>Figure 1:</strong> Comparison of PPO and DQN on discrete environments: (a) Cartpole, (b) Acrobot and (c) Discrete Lunar Lander
+</p>
 
 <div align="center"> <img src="results/performance_lunar-continuous.png" width="33%" alt="(a) Lunar Lander (Continuous)"/> <img src="results/performance_pendulum.png" width="33%" alt="(b) Pendulum"/> </div>
-Figure 2: Comparison of PPO, TD3, and SAC on continuous environments: (a) Lunar Lander Continuous and (b) Pendulum.
-
-TODOOOO LITTLE SENTENCE TO EXPLAIN THE PLOTS
+<p align="center">
+  <strong>Figure 2:</strong> Comparison of PPO, TD3 and SAC on continuous environments: (a) Continuous Lunar Lander and (b) Pendulum
+</p>
 
 The following table summarises the computational aspects such as training speed (measured in frames per second), storage footprint (in kilobytes) and parameter density (parameters per kilobyte) for each algorithm-environment pair.
 
 <p align="center">
   <img src="results/comparison_table_complete.png" width="40%" alt="RL algorithm efficiency table">
 </p>
-
-TODOOOO LITTLE SENTENCE TO EXPLAIN THE TABLE
+<p align="center">
+  <strong>Table 1:</strong> Comparison of training speed (FPS), storage footprint (SF) and parameter density (PD) across the algorithms and environments.
+</p>
 
 ## Conclusion
 
-TODOOOOOOOOOOO
+In discrete environments such as Cartpole and Acrobot, PPO consistently exhibited faster convergence and superior final performance compared to DQN. Additionally, PPO maintains a favorable balance between training speed and parameter density. This makes it well-suited for simpler state-action spaces, discrete control tasks and scenarios requiring rapid prototyping with limited computational resources. However, the advantages of PPO diminish in continuous control tasks. In environments such as Pendulum, PPO struggled to reach optimal performance and showed high variability throughout training. In contrast, SAC consistently outperformed PPO on Pendulum and Continuous Lunar Lander. This is due to its off-policy actor-critic framework tailored for continuous action spaces. It demonstrated more stable learning curves and achieved higher final rewards. However, this improved performance comes at a computational cost. SAC and TD3 require substantially more memory and exhibit slower training speeds. These trade-offs highlight the importance of algorithm selection based on the target application. SAC works well for complex continuous control tasks when plenty of computing power is available.
