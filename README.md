@@ -139,7 +139,7 @@ We evaluated and compared the four introduced deep reinforcement learning algori
 
 In total, we ran twelve experiments, selecting algorithm-environment pairs based on action space compatibility. For discrete environments (Cartpole, Acrobot and Discrete Lunar Lander), we tested DQN and PPO. For continuous environments (Pendulum and Continuous Lunar Lander), we tested PPO, SAC and TD3.
 
-The training lengths varied per environment (for example 20,000–200,000 timesteps) and the results were evaluated using metrics such as mean reward, training speed (FPS), storage footprint and parameter density. We visualised the learning progress with mean ± standard deviation reward curves and the key results are discussed in the report and shown in the figures and table of [Results](#results).
+The training lengths varied per environment (for example 20,000–200,000 timesteps) and the results were evaluated using metrics such as mean reward, training speed (FPS), storage footprint and parameter density. We visualised the learning progress with mean ± standard deviation reward curves and the key results are discussed in the report and shown in figures 1 and 2 and table 1.
 
 
 ## Results
@@ -158,7 +158,7 @@ The following plots visualise the training performance of the evaluated algorith
 The following table summarises the computational aspects such as training speed (measured in frames per second), storage footprint (in kilobytes) and parameter density (parameters per kilobyte) for each algorithm-environment pair.
 
 <p align="center">
-  <img src="results/comparison_table_complete.png" width="40%" alt="RL algorithm efficiency table">
+  <img src="results/comparison_table_complete.png" width="50%" alt="RL algorithm efficiency table">
 </p>
 <p align="center">
   <strong>Table 1:</strong> Comparison of training speed (FPS), storage footprint (SF) and parameter density (PD) across the algorithms and environments.
