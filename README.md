@@ -127,6 +127,7 @@ The repository is structured the following way:
 
 ```
 Deep_RL/
+├── illustrations/                   # Directory containing the illustrations of the different environments
 ├── results/                         # Directory containing all the obtained plots and tables
 ├── results_data/                    # Directory containing all pickle files per environment
 ├── analysis.ipynb                   # Jupyter notebook used to analyse the training speed, storage footprint and parameter density per algorithm
