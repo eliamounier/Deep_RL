@@ -82,7 +82,7 @@ The Lunar Lander environment is a classic rocket trajectory optimisation problem
     <tr>
       <td align="center">
         <img src="illustrations/cart_pole.png" width="80px"><br>
-        <sub>CartPole</sub>
+        <sub>Cartpole</sub>
       </td>
       <td align="center">
         <img src="illustrations/acrobot.png" width="80px"><br>
@@ -111,7 +111,7 @@ The Lunar Lander environment is a classic rocket trajectory optimisation problem
 - [tqdm](https://pypi.org/project/tqdm/)
 - [PyTorch](https://pypi.org/project/torch/)
 - [Gymnasium](https://pypi.org/project/gymnasium/)
-- [Stable-Baselines3](https://pypi.org/project/stable-baselines3/)
+- [Stable Baselines3](https://pypi.org/project/stable-baselines3/)
 - [Tensorboard](https://pypi.org/project/tensorboard/)
 
 **`requirements.txt`** is provided to install the necessary Python dependencies.
@@ -139,7 +139,7 @@ We evaluated and compared the four introduced deep reinforcement learning algori
 
 In total, we ran twelve experiments, selecting algorithm-environment pairs based on action space compatibility. For discrete environments (Cartpole, Acrobot and Discrete Lunar Lander), we tested DQN and PPO. For continuous environments (Pendulum and Continuous Lunar Lander), we tested PPO, SAC and TD3.
 
-The training lengths varied per environment (for example 20,000–200,000 timesteps) and the results were evaluated using metrics such as mean reward, training speed (FPS), storage footprint and parameter density. We visualised the learning progress with mean ± standard deviation reward curves and the key results are discussed in the report and shown in figures 1 and 2 and table 1.
+The training lengths varied per environment and the results were evaluated using metrics such as mean reward, training speed (FPS), storage footprint and parameter density. We visualised the learning progress with mean ± standard deviation reward curves and the key results are discussed in the report and shown in figures 1 and 2 and table 1.
 
 
 ## Results
@@ -161,7 +161,7 @@ The following table summarises the computational aspects such as training speed 
   <img src="results/comparison_table_complete.png" width="50%" alt="RL algorithm efficiency table">
 </p>
 <p align="center">
-  <strong>Table 1:</strong> Comparison of training speed (FPS), storage footprint (SF) and parameter density (PD) across the algorithms and environments.
+  <strong>Table 1:</strong> Comparison of training speed (FPS), storage footprint (SF) and parameter density (PD) across the algorithms and environments
 </p>
 
 ## Conclusion
